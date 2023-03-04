@@ -10,13 +10,13 @@ if (WIN32)
     set(OpenCV_DIR "C:/opencv/4.6.0/build/install")
 endif (WIN32)
 
-# Create an output dir in PROJECT_SOURCE_DIR
-set(OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE})
-file(MAKE_DIRECTORY ${OUTPUT_DIRECTORY})
-
 find_package(OpenCV 4 REQUIRED)
 
-if(NOT OpenCV_FOUND)
+if(OpenCV_FOUND)
+  # Create an output dir in PROJECT_SOURCE_DIR
+  set(OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE})
+  file(MAKE_DIRECTORY ${OUTPUT_DIRECTORY})
+else()
   message(FATAL_ERROR "OpenCV not found!!")
 endif()
 
