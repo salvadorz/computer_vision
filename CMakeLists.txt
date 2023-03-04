@@ -20,5 +20,5 @@ else()
   message(FATAL_ERROR "OpenCV not found!!")
 endif()
 
-add_executable(opencv_starter main.cpp)
+add_executable(opencv_starter simple_image.cpp)
 target_link_libraries(opencv_starter ${OpenCV_LIBS})

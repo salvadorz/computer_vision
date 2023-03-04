@@ -10,9 +10,10 @@ int main( int argc, char** argv )
     std::string img = "../img/lenna.jpg";
     Mat srcImage = imread(img);
     if (!srcImage.data) {
-        return 1;
+        return EXIT_FAILURE;
     }
-    imshow("srcImage", srcImage);
+    namedWindow("Lenna Image", WINDOW_AUTOSIZE);
+    imshow("Lenna Image", srcImage);
     waitKey(0);
 
     return 0;
