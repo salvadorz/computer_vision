@@ -1,0 +1,2 @@
+add_executable(simple_image simple_image.cpp)
+target_link_libraries(simple_image ${OpenCV_LIBS})

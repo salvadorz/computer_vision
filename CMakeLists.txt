@@ -14,11 +14,9 @@ find_package(OpenCV 4 REQUIRED)
 
 if(OpenCV_FOUND)
   # Create an output dir in PROJECT_SOURCE_DIR
-  set(OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE})
-  file(MAKE_DIRECTORY ${OUTPUT_DIRECTORY})
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE}/bin)
 else()
   message(FATAL_ERROR "OpenCV not found!!")
 endif()
 
-add_executable(opencv_starter simple_image.cpp)
-target_link_libraries(opencv_starter ${OpenCV_LIBS})
+add_subdirectory("src")
