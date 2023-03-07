@@ -13,6 +13,7 @@ endif (WIN32)
 find_package(OpenCV 4 REQUIRED)
 
 if(OpenCV_FOUND)
+  include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/)
   # Create an output dir in PROJECT_SOURCE_DIR
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE}/bin)
 else()
