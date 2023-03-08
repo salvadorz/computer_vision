@@ -15,7 +15,7 @@
 /// @param mat_Img to calculate the histogram and returns and image with
 /// @param width and
 /// @param height to be displayed
-/// @return 
+/// @return Image with the histogram of each Component (B,G,R)
 cv::Mat Histogram_Img(const cv::Mat& mat_Img, const int width, const int height);
 
 #endif // HISTOGRAM_IMG_HPP_

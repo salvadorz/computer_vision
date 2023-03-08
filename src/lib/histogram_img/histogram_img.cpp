@@ -10,7 +10,7 @@ cv::Mat Histogram_Img(const cv::Mat& mat_Img, const int width, const int height)
         std::vector<cv::Mat> rgb_planes;
         cv::split(mat_Img, rgb_planes); //Separates the image into 3 planes (R,G,B)
 
-        int int_histSz = 256;
+        unsigned int int_histSz = 256;
         // Ranges RGB
         float range[] = {0, 256};
         const float* histRange = {range};
