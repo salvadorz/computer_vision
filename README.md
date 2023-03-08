@@ -1,5 +1,4 @@
-# OpenCV Starter Project
-A Starter OpenCV project which can be used as a template
+# Computer Vision Repo with some projects using OpenCV framework
 
 ## Prerequisites
 Install common dependencies for `OpenCV` on your system
@@ -14,7 +13,7 @@ sudo apt install build-essential cmake git pkg-config libgtk-3-dev \
 ```bash
 # !/bin/bash
 # Script to Install OpenCV
-# Author: Salvador Zendejas.
+# Author: Salvador Z.
 
 set -e
 
@@ -51,7 +50,7 @@ if [[ ! -d "${OUT_DIR}" ]]; then
 	#Build
 	make -j${CORES}
 	# Install
-	echo "Installing OpenCV ${CV_VER} in $HOME/.local"
+	echo "Installing OpenCV ${CV_VER} in /usr/local"
 	make install
 	echo "OpenCV ${CV_VER} ready to be used"
 fi
