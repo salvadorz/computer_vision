@@ -10,7 +10,7 @@ cv::Mat Histogram_Img(const cv::Mat& mat_Img, const int width, const int height)
         std::vector<cv::Mat> rgb_planes;
         cv::split(mat_Img, rgb_planes); //Separates the image into 3 planes (R,G,B)
 
-        unsigned int int_histSz = 256;
+        int int_histSz = 256;
         // Ranges RGB
         float range[] = {0, 256};
         const float* histRange = {range};
@@ -33,7 +33,7 @@ cv::Mat Histogram_Img(const cv::Mat& mat_Img, const int width, const int height)
         cv::normalize(g_hist, g_hist, 0, mat_histImage.rows, cv::NORM_MINMAX, -1, cv::Mat() );
         cv::normalize(b_hist, b_hist, 0, mat_histImage.rows, cv::NORM_MINMAX, -1, cv::Mat() );
 
-        for (size_t i = 1; i < int_histSz; ++i) {
+        for (int i = 1; i < int_histSz; ++i) {
             cv::line(mat_histImage, 
                 cv::Point(bin_w*(i-1), height - cvRound(b_hist.at<float>(i-1))),
                 cv::Point(bin_w*(i)  , height - cvRound(b_hist.at<float>(i))),
