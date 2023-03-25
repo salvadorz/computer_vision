@@ -25,7 +25,7 @@ int main(int argc, char **argv)
     else
         ret = EXIT_FAILURE;
 
-    cv::waitKey(0);
+    cv::waitKey(2500);
 
     return ret;
 }

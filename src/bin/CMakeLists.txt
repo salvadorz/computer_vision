@@ -15,3 +15,6 @@ target_link_libraries(l4_hsv_color_space ${OpenCV_LIBS})
 
 add_executable(l5_convolution l5_convolution.cpp)
 target_link_libraries(l5_convolution ${OpenCV_LIBS})
+
+add_executable(l6_correlation l6_correlation.cpp)
+target_link_libraries(l6_correlation ${OpenCV_LIBS})
