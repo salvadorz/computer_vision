@@ -12,3 +12,6 @@ target_link_libraries(lut_transform ${OpenCV_LIBS})
 
 add_executable(l4_hsv_color_space l4_color_space_hsv.cpp)
 target_link_libraries(l4_hsv_color_space ${OpenCV_LIBS})
+
+add_executable(l5_convolution l5_convolution.cpp)
+target_link_libraries(l5_convolution ${OpenCV_LIBS})
